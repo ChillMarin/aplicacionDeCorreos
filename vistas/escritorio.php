@@ -25,37 +25,37 @@
 
                 <div class="row">
                     <h1>Escritorio</h1>
-                    <p>Puedes crear citas, enviar correos, mandar recordatorios y planificar tareas</p>
+                    <p id="texto">Puedes crear citas, enviar correos, mandar recordatorios y planificar tareas</p>
 
                     <form action="/action_page.php">
-                    <div class="form-group">
-                        <label for="email">Correo</label>
-                        <input type="email" class="form-control" placeholder="Enter email" id="email">
-                    </div>
-                    <div class="input-group mb-3">
-                    <input type="file" class="form-control" id="inputGroupFile02">
-                    <label class="input-group-text" for="inputGroupFile02">Upload</label>
-                    </div>
+                        <select class="form-select" aria-label="Default select example" id="accion">
+                            <option selected>Seleccione una opción</option>
+                            <option id="correoMasivo" value="1">Correo masivo</option>
+                            <option id="recordatorioPago" value="2">Recordatorio de pago</option>
+                            <option id="recodatorioClase" value="3">Recordatorio de clases</option>
+                        </select>
+                            
+                        <div id="infoForm">   
+                            <div class="input-group mb-3">
+                                <input type="file" class="form-control" id="inputGroupFile02">
+                                <label class="input-group-text" for="inputGroupFile02">Subir excel</label>
+                            </div>
 
-                    <div class="form-group">
-                        <label for="txt">Asunto</label>
-                        <input type="text" class="form-control" placeholder="Enter password" id="pwd">
-                    </div>
+                            <div class="form-group">
+                                <label for="txt">Asunto</label>
+                                <input type="text" class="form-control" placeholder="Asunto" id="pwd">
+                            </div>
+                        
+                            <div class="input-group">
+                                <span class="input-group-text">Mensaje</span>
+                                <textarea class="form-control" aria-label="With textarea"></textarea>
+                                </div>
 
-                    <div class="input-group">
-                        <span class="input-group-text">Mensaje</span>
-                        <textarea class="form-control" aria-label="With textarea"></textarea>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                            
+
                         </div>
-
-                    <div class="form-group form-check">
-                        <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox"> Remember me
-                        </label>
-                    </div>
-                    
-                    <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
-
 
                 </div>
 
