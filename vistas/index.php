@@ -10,12 +10,23 @@
     <link href="../estilos/style.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="../js/calendar.js"></script>
+    <script src="https://cdn.tiny.cloud/1/5ecawj3f7w0drv10elpdigpk58qefvubdk1kcvqng4axubh0/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+
+<script>
+  tinymce.init({
+    selector: 'textarea#editor',
+    menubar: false,
+    plugins: 'lists, link, image, media',
+    toolbar: 'h1 h2 bold italic alignleft aligncenter alignright alignjustify strikethrough blockquote bullist numlist backcolor | link image media | removeformat help'
+  });
+</script>
 
 
     <title>Escritorio</title>
   </head>
   <body>
     <?php
+        
         require_once('escritorio.php');
     ?>
 
