@@ -5,20 +5,28 @@ $locationExcel = $_FILES['excelFile']['tmp_name'];
 
 $excelInformation = $_FILES['excelFile'];
 $excelInformation = file_get_contents($excelInformation['tmp_name']); 
+print_r($excelInformation);
+echo"<br>";
+echo"<br>";
 
 $excelInformation = explode("\n", $excelInformation);
-$fileContacts = array_filter($excelInformation); 
-/*
+$excelInformation = array_filter($excelInformation); 
+
+print_r($excelInformation);
 // preparar contactos (convertirlos en array)
-foreach ($fileContacts as $contact) {
-	$infoExcel[] = explode(",", $contact);
+foreach ($excelInformation as $contact) {
+	$infoExcel[] = explode(";", $contact);
 }
-*/
+
+$infoExcel = array_filter($infoExcel);
+echo"<br>";
+echo"<br>";
+print_r($infoExcel);
 
 // insertar contactos
 
-print_r($fileContacts);
-foreach ($fileContacts as $contactData) 
+ 
+foreach ($infoExcel as $contactData) 
 {
 	$conexion->query("INSERT INTO usuarios 
 						(nombre,
@@ -29,11 +37,11 @@ foreach ($fileContacts as $contactData)
 						 VALUES
 
                          (
-                            '$contactData[0]',
-                            '$contactData[1]',
-                            '$contactData[2]',
-                            '$contactData[3]',
-                            '$contactData[4]'
+                            '{$contactData[0]}',
+                            '{$contactData[1]}',
+                            '{$contactData[2]}',
+                            '{$contactData[3]}',
+                            '{$contactData[4]}'
                          )
 
 						 "); 
