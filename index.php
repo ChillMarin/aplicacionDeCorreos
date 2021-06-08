@@ -27,7 +27,7 @@
   <body>
     <?php
         
-        require_once('escritorio.php');
+        require_once('vistas/escritorio.php');
     ?>
 
 
