@@ -45,7 +45,7 @@
                             </div>
 
                             <div class="form-floating mb-3">
-                                <input name="asunto" type="text" class="form-control" id="floatingInput" placeholder="Asunto" required>
+                                <input name="asunto" type="text" class="form-control" id="floatingInput" placeholder="asunto" required>
                                 <label for="floatingInput">Asunto</label>
                             </div>
                         
